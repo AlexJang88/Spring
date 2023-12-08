@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans https://www.springframework.org/schema/beans/spring-beans.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.3.xsd
+		http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+	
+	<!-- Root Context: defines shared resources visible to all other web components -->
+	<aop:aspectj-autoproxy />
+	<context:annotation-config />
+	<context:component-scan base-package="test.spring.mvc.controller" />
+	<context:component-scan base-package="test.spring.mvc.service" />
+	<context:component-scan base-package="test.spring.mvc.aop" />
+	
+	<!-- <bean id="ta" class="test.spring.mvc.aop.TestAdvice" />
+	<aop:config>
+		<aop:pointcut expression="execution( * test.spring.mvc.controller.*.*(..))" id="pc"/>
+		<aop:aspect id="ap" ref="ta">
+			<aop:around method="around" pointcut-ref="pc"/>
+		</aop:aspect>
+	</aop:config> -->
+		
+</beans>
