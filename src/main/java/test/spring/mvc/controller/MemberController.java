@@ -3,14 +3,21 @@ package test.spring.mvc.controller;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.servlet.ModelAndView;
 
 @RestController
 @RequestMapping("/user/*")
 public class MemberController {
 	
 	@RequestMapping("main")
-	public String main() {
-		return "main page";
+	public ModelAndView main(String id) {
+		System.out.println("MemberController--main----->>"+id);
+		ModelAndView mv = new ModelAndView();
+		//model 의 addAttribute 랑 같은 기능
+		mv.addObject("count",100);
+		mv.addObject("name","java");
+		mv.setViewName("member/main");
+		return mv;
 	}
 	@RequestMapping("loginForm")
 	public String loginForm() {
