@@ -7,9 +7,11 @@
  		$("button").click(function(){
  		$.ajax({
  			url:"/js/test07",
+ 			dataType: "JSON",
  			success : function(e){
 				posi=e;
 				console.log(posi);
+				console.log(posi[0].name);
  			}
  			});
  		});

@@ -8,7 +8,6 @@
  			url:"/js/idCheck",
  			data : {id:$("#id").val()},
  			method : "get" ,
- 			
  			success : function(e){
  				if(e=='fail'){
  					$("div").text(e).css("color","red");

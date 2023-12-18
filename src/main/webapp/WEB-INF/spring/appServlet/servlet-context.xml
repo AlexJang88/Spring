@@ -26,6 +26,11 @@
 	
 	<context:component-scan base-package="test.spring.mvc" />
 	
+	<beans:bean id="chat" class="test.spring.mvc.controller.MessageChat">
+	</beans:bean>
+	
+	
+	
 	
 	
 </beans:beans>
